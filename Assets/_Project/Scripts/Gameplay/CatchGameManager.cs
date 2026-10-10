@@ -170,4 +170,11 @@ public class CatchGameManager : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+    // Hàm dùng cho nút Quit trong màn chơi
+    public void QuitToMainMenu()
+    {
+        Time.timeScale = 1f; // Khôi phục thời gian bình thường phòng khi game đang pause/thua
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+    }
 }
